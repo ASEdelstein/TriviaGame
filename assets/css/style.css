@@ -1,0 +1,66 @@
+body {
+    background: url(http://static6.depositphotos.com/1033335/546/i/950/depositphotos_5468502-Old-paper-grunge-background--parchment-papyrus-manuscript.jpg);
+}
+
+.container {
+    text-align: center;
+    
+}
+
+
+h2 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(white);
+    line-height: 1em;
+    font-size: large;
+
+}
+.btn { 
+  align-content: center;
+  color: black; 
+  background-color: #B8A351; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn:hover, 
+.btn:focus, 
+.btn:active, 
+.btn.active, 
+.open .dropdown-toggle.btn { 
+  color: #ffffff; 
+  background-color: #000000; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn:active, 
+.btn.active, 
+.open .dropdown-toggle.btn { 
+  background-image: none; 
+
+} 
+ 
+.btn .badge { 
+  color: #B8A351; 
+  background-color: #ffffff; 
+}
+
+#question {
+  line-height: 1em;
+}
+#answer {
+  line-height: 1em;
+}
+#choice-holder-1{
+  line-height: 1em;
+}
+#choice-holder-2{
+  line-height: 1em;
+}
+#choice-holder-3{
+  line-height: 1em;
+}
+#choice-holder-4{
+  line-height: 1em;
+}
+

@@ -1,0 +1,82 @@
+h1 {
+  font: 60px;
+  color: antiquewhite;
+  font-style: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  color: antiquewhite;
+  font-style: sans-serif;
+}
+
+#timer,
+#question,
+#answers,
+#quizMessage,
+#correct,
+#wrong,
+#missed {
+  font-size: 18px;
+  color: antiquewhite;
+  font-style: sans-serif;
+}
+.hidden {
+  display: none; }
+#wrapper {
+  border-top: 2px dashed black;
+  border-bottom: 2px dashed black;
+  padding: 20px;
+  /* margin-bottom: 100px; */
+}
+#testimonials {
+  border-bottom: 2px dashed black;
+  font-size: 20px; }
+ q{
+   size:30px;
+ }
+  #testimonials p {
+    padding: 20px;; }
+    #testimonials li{ 
+      display:none;
+    }
+    #testimonials ul{
+      list-style:none;
+    } 
+
+#start_button {
+  margin-left: 200px;
+  display: block;
+  color: brown;
+}
+span{
+  font-size:40px;
+  color: violet;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 50px;
+
+}
+ul {
+  list-style-type: none;
+}
+.img{
+  width: 200px;
+  height: 150px;
+  margin-left:100px;
+  opacity:0.6;
+  border:1px solid black;
+}
+#fact{
+  font-size:25px;
+  color:blanchedalmond;
+  text-align: auto;
+}
+
+ body { 
+     background: url(http://static6.depositphotos.com/1033335/546/i/950/depositphotos_5468502-Old-paper-grunge-background--parchment-papyrus-manuscript.jpg);
+
+
+}

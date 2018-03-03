@@ -1,4 +1,4 @@
-// Define variables
+// Variables
 $(document).ready(function(){
     var count = 0;
     var time = 61;
@@ -8,7 +8,7 @@ $(document).ready(function(){
     var incorrect = 0;
     var unanswered = 0;
 
-// Questions and Answer Arrays
+// Question and answer section in order
     var question = ["What is the science of beer making called?",
     "This sour beer can have a funky 'barn yard' flavor due to the wild brettanomyces yeast strain and Lactobacillus delbrukii bacteria used. Pilsner malt is most common and old hops are often used. It has a very light golden color and ranges from 5-8% in alcohol?", "Which of these is used in Biodynamic grape farming?", "Where is Calvados from?", "What is Chianti?", "What is a Lager?", "What is a Cuba Libre?", "This liqueur was invented in 1797; it soon gained popularity amongst the fairer sex. It was also one of the first liqueurs to be advertised. However its manufacture was always shrouded in controversy due to one of its ingredients, wormwood. It was subsequently banned in many countries. Which 'Green Fairy' am I talking about??"];
     var answer = ["Zymurgy", "Geuze", "A cow's horn filled with manure", "France", "A wine from a region in Tuscany, Italy", "Lager is a type of beer conditioned at low temperatures.", "A rum and coke with lime", "Absinthe"];
@@ -17,7 +17,7 @@ $(document).ready(function(){
     var thirdChoice = ["Zygotica", "Witbier", "A stag's bladder soaked in herbal tea", "Belgium", "A Spanish cordial liquer", "Lager is a type of beer conditioned at low temperatures.", "A rum and coke with lime", "Absinthe"];
     var fourthChoice = ["Sacromyetica", "Geuze", "A ram's horn filled with quartz", "Australia", "A wine from a region in Tuscany, Italy", "A wine from the Alois Lageder region of the Italian Alps", "A vodka and pepsi with lemon", "Pernod"];
 
-// Show & Hide Functions
+// Show answer options and hide results
     function showHolders() {
         $("#question").show();
         $("#answer-choice-1").show();
@@ -50,7 +50,7 @@ $(document).ready(function(){
         $("#answer-choice-3").html(thirdChoice[count]);
         $("#answer-choice-4").html(fourthChoice[count]);
     
-    // Hover CSS
+    // Hover function for highlighting answer choices
         $("#answer-option-1").hover(function() {
             $(this).css("color", "green");
         },
@@ -81,7 +81,7 @@ $(document).ready(function(){
     $("#answer-choice-3").on("click", checkAnswer)
     $("#answer-choice-4").on("click", checkAnswer)
 
-// Check Answer Function
+// If answer correct display image and countdown
     function checkAnswer() {
 
         hideHolders();
@@ -108,7 +108,7 @@ $(document).ready(function(){
         checkGameEnd();  
     }
 
-// Check End Game Function
+// Countdown timeholder and endgame function
     function checkGameEnd() {
         if(count === question.length) {
             $("#time-holder").hide();
@@ -157,7 +157,7 @@ $(document).ready(function(){
 
     resetTime();
 
-// Display Images With Answer
+// Show answer and image upon correct/incorrect answer.
     function displayImage() {
         if(count === 0) {
             $("#image").show();
@@ -196,7 +196,7 @@ $(document).ready(function(){
         $("#image").show();
         $("#image").html('<img src="assets/images/shot.png">');
     }
- // Show Results Function   
+ // Results function commands   
     function showResults() {
         $("#answer").html("");
         $("#correct-answer").show();
@@ -211,21 +211,21 @@ $(document).ready(function(){
         alert("Correct: " + correct + " | Incorrect: " + incorrect + " | Unanswered: " + unanswered);
     }
 
-// Reset Results Function 
+// Reset results
     function resetResults() {
         correct = 0;
         incorrect = 0;
         unanswered = 0;
     }
 
-// Start Game Function
+// Begin game
     function startGame() {
         $(".start").hide();
         startTime();
         displayQuestion();
     }
 
-// Start Game On Click
+// Begin game on click
   $(".start").on("click", function() {
     startGame();
   });

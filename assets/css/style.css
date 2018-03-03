@@ -4,29 +4,43 @@ body {
 
 .container {
     text-align: center;
-    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
+
+h1 {
+  text-align: center;
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.btn start btn-lg {
+  align-content: center;
+}
 
 h2 {
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(white);
     line-height: 1em;
     font-size: large;
+    font-weight: bold;
+    font-size: 22px;
+    font-weight: bold;
 
 }
 .btn { 
+  content: center;
   align-content: center;
   color: black; 
-  background-color: #B8A351; 
+  background-color: blue; 
   border-color: #FFFFFF; 
 } 
  
 .btn:hover, 
 .btn:focus, 
 .btn:active, 
-.btn.active, 
 .open .dropdown-toggle.btn { 
   color: #ffffff; 
   background-color: #000000; 
@@ -34,14 +48,13 @@ h2 {
 } 
  
 .btn:active, 
-.btn.active, 
 .open .dropdown-toggle.btn { 
   background-image: none; 
 
 } 
  
 .btn .badge { 
-  color: #B8A351; 
+  color: black; 
   background-color: #ffffff; 
 }
 
@@ -51,16 +64,27 @@ h2 {
 #answer {
   line-height: 1em;
 }
-#choice-holder-1{
+#answer-option-1{
   line-height: 1em;
 }
-#choice-holder-2{
+#answer-option-2{
   line-height: 1em;
 }
-#choice-holder-3{
+#answer-option-3{
   line-height: 1em;
 }
-#choice-holder-4{
+#answer-option-4{
   line-height: 1em;
 }
 
+@media only screen and (max-width: 500px) {
+  .gridmenu {
+      width:100%;
+  }
+  .gridmain {
+      width:100%;
+  }
+  .gridright {
+      width:100%;
+  }
+}

@@ -1,7 +1,7 @@
 // Define variables
 $(document).ready(function(){
     var count = 0;
-    var time = 31;
+    var time = 61;
     var isSelected = false;
     var ticker;
     var correct = 0;
@@ -10,28 +10,27 @@ $(document).ready(function(){
 
 // Questions and Answer Arrays
     var question = ["What is the science of beer making called?",
-    "This sour beer can have a funky 'barn yard' flavor due to the wild brettanomyces yeast strain and Lactobacillus delbrukii bacteria used. Pilsner malt is most common and old hops are often used. It has a very light golden color and ranges from 5-8% in alcohol?", "Which of these is used in Biodynamic grape farming?", "What 3 countries were part of the original Axis powers in World War II after the Tripartite Pact was signed?", "What Byzantine city was renamed Istanbul after being captured by the Ottoman Empire?",
-    "According to Arthurian legend, what was the name of the sword in the stone?", "The United States Constitution replaced what other document on March 4, 1789?", "Who wrote the Pledge of Allegiance of the United States?"];
-    var answer = ["Zymurgy", "Geuze", "A cow's horn filled with manure", "Germany, Italy, and Japan", "Constantinople", "Excalibur or Caliburn", "The Articles of Confederation", "Francis Bellamy"];
-    var firstChoice = ["Zymurgy", "Flemish Red Ale", "A rabbit's tail wrapped in Valerian leaves", "USA, Slovakia, and Japan", "Adrianople", "Stonecutter", "Bill of Rights", "Francis Scott Key"];
-    var secondChoice = ["Saccormycecea", "Oude Bruin", "A cow's horn filled with manure", "Bulgaria, Germany, and France", "Nicaea", "Katopris", "Declaration of Independence", "John Stafford Smith"];
-    var thirdChoice = ["Zygotica", "Witbier", "A stag's bladder soaked in herbal tea", "Germany, Japan, and Finland", "Antioch", "Godsbane", "Emancipation Proclamation", "Betsy Ross"];
-    var fourthChoice = ["Sacromyetica", "Geuze", "A ram's horn filled with quartz", "Germany, Italy, and Japan", "Constantinople", "Excalibur or Caliburn", "The Articles of Confederation", "Francis Bellamy"];
+    "This sour beer can have a funky 'barn yard' flavor due to the wild brettanomyces yeast strain and Lactobacillus delbrukii bacteria used. Pilsner malt is most common and old hops are often used. It has a very light golden color and ranges from 5-8% in alcohol?", "Which of these is used in Biodynamic grape farming?", "Where is Calvados from?", "What is Chianti?", "What is a Lager?", "What is a Cuba Libre?", "This liqueur was invented in 1797; it soon gained popularity amongst the fairer sex. It was also one of the first liqueurs to be advertised. However its manufacture was always shrouded in controversy due to one of its ingredients, wormwood. It was subsequently banned in many countries. Which 'Green Fairy' am I talking about??"];
+    var answer = ["Zymurgy", "Geuze", "A cow's horn filled with manure", "France", "A wine from a region in Tuscany, Italy", "Lager is a type of beer conditioned at low temperatures.", "A rum and coke with lime", "Absinthe"];
+    var firstChoice = ["Zymurgy", "Flemish Red Ale", "A rabbit's tail wrapped in Valerian leaves", "France", "A grape", "A lumberjack in a red and black flannel jacket", "A nickname of The Cuban Revolution", "Tinkerbell"];
+    var secondChoice = ["Saccormycecea", "Oude Bruin", "A cow's horn filled with manure", "Spain", "A noble title", "Who cares it's gross", "A Cuban library", "Creme de Menthe"];
+    var thirdChoice = ["Zygotica", "Witbier", "A stag's bladder soaked in herbal tea", "Belgium", "A Spanish cordial liquer", "Lager is a type of beer conditioned at low temperatures.", "A rum and coke with lime", "Absinthe"];
+    var fourthChoice = ["Sacromyetica", "Geuze", "A ram's horn filled with quartz", "Australia", "A wine from a region in Tuscany, Italy", "A wine from the Alois Lageder region of the Italian Alps", "A vodka and pepsi with lemon", "Pernod"];
 
 // Show & Hide Functions
     function showHolders() {
         $("#question").show();
-        $("#choice-holder-1").show();
-        $("#choice-holder-2").show();
-        $("#choice-holder-3").show();
-        $("#choice-holder-4").show();
+        $("#answer-option-1").show();
+        $("#answer-option-2").show();
+        $("#answer-option-3").show();
+        $("#answer-option-4").show();
     }
     function hideHolders() {
         $("#question").hide();
-        $("#choice-holder-1").hide();
-        $("#choice-holder-2").hide();
-        $("#choice-holder-3").hide();
-        $("#choice-holder-4").hide();
+        $("#answer-option-1").hide();
+        $("#answer-option-2").hide();
+        $("#answer-option-3").hide();
+        $("#answer-option-4").hide();
     }
     function hideResults() {
         $("#correct-holder").hide();
@@ -46,41 +45,41 @@ $(document).ready(function(){
         $("#time-holder").show();
         showHolders();
         $("#question").html(question[count]);
-        $("#choice-holder-1").html(firstChoice[count]);
-        $("#choice-holder-2").html(secondChoice[count]);
-        $("#choice-holder-3").html(thirdChoice[count]);
-        $("#choice-holder-4").html(fourthChoice[count]);
+        $("#answer-option-1").html(firstChoice[count]);
+        $("#answer-option-2").html(secondChoice[count]);
+        $("#answer-option-3").html(thirdChoice[count]);
+        $("#answer-option-4").html(fourthChoice[count]);
     
     // Hover CSS
-        $("#choice-holder-1").hover(function() {
+        $("#answer-option-1").hover(function() {
             $(this).css("color", "green");
         },
         function(){
             $(this).css("color", "black");
         });
-        $("#choice-holder-2").hover(function() {
+        $("#answer-option-2").hover(function() {
             $(this).css("color", "green");
         },
         function(){
             $(this).css("color", "black");
         });
-        $("#choice-holder-3").hover(function() {
+        $("#answer-option-3").hover(function() {
             $(this).css("color", "green");
         },
         function(){
             $(this).css("color", "black");
         });
-        $("#choice-holder-4").hover(function() {
+        $("#answer-option-4").hover(function() {
             $(this).css("color", "green");
         },
         function(){
             $(this).css("color", "black");
         });
     }
-    $("#choice-holder-1").on("click", checkAnswer) 
-    $("#choice-holder-2").on("click", checkAnswer)
-    $("#choice-holder-3").on("click", checkAnswer)
-    $("#choice-holder-4").on("click", checkAnswer)
+    $("#answer-option-1").on("click", checkAnswer) 
+    $("#answer-option-2").on("click", checkAnswer)
+    $("#answer-option-3").on("click", checkAnswer)
+    $("#answer-option-4").on("click", checkAnswer)
 
 // Check Answer Function
     function checkAnswer() {
@@ -91,7 +90,7 @@ $(document).ready(function(){
             stopTime();
             isSelected = true;
             $("#answer").show();
-            $("#answer").html("Cheers, the answer is: " + answer[count]);
+            $("#answer").html("Cheers! The answer is: " + answer[count]);
             displayImage();
             correct++;
             count++;
@@ -124,7 +123,7 @@ $(document).ready(function(){
     }
 
     function resetTime() {
-        time = 31;
+        time = 61;
     }
 
     function displayTime() {
@@ -151,8 +150,8 @@ $(document).ready(function(){
         clearInterval(ticker);
         resetTime();
         if(count < question.length - 1) {
-            setTimeout(startTime, 2000);
-            setTimeout(displayQuestion, 3000);
+            setTimeout(startTime, 10000);
+            setTimeout(displayQuestion, 15000);
         }
     }
 
@@ -170,27 +169,27 @@ $(document).ready(function(){
         }
         else if(count === 2) {
             $("#image").show();
-            $("#image").html('<img src="assets/images/dionysus.png">');
+            $("#image").html('<img src="assets/images/cow.png">');
         }
         else if(count === 3) {
             $("#image").show();
-            $("#image").html('<img src="assets/images/axis.png">');
+            $("#image").html('<img src="assets/images/calvados.png">');
         }
         else if(count === 4) {
             $("#image").show();
-            $("#image").html('<img src="assets/images/constantinople.png">');
+            $("#image").html('<img src="assets/images/Chianti.png">');
         }
         else if(count === 5) {
             $("#image").show();
-            $("#image").html('<img src="assets/images/sword.png">');
+            $("#image").html('<img src="assets/images/lager.png">');
         }
         else if(count === 6) {
             $("#image").show();
-            $("#image").html('<img src="assets/images/articles.png">');
+            $("#image").html('<img src="assets/images/Cuba-libre.png">');
         }
         else if(count === 7) {
             $("#image").show();
-            $("#image").html('<img src="assets/images/francis.png">');
+            $("#image").html('<img src="assets/images/Absinthe.png">');
         }
     }
     function displayShot(){

@@ -27,7 +27,7 @@ h2 {
     font-size: large;
     font-weight: bold;
     font-size: 22px;
-    font-weight: bold;
+    
 
 }
 .btn { 
@@ -64,16 +64,16 @@ h2 {
 #answer {
   line-height: 1em;
 }
-#answer-option-1{
+#answer-choice-1{
   line-height: 1em;
 }
-#answer-option-2{
+#answer-choice-2{
   line-height: 1em;
 }
-#answer-option-3{
+#answer-choice-3{
   line-height: 1em;
 }
-#answer-option-4{
+#answer-choice-4{
   line-height: 1em;
 }
 

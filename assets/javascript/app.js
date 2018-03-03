@@ -20,21 +20,21 @@ $(document).ready(function(){
 // Show & Hide Functions
     function showHolders() {
         $("#question").show();
-        $("#answer-option-1").show();
-        $("#answer-option-2").show();
-        $("#answer-option-3").show();
-        $("#answer-option-4").show();
+        $("#answer-choice-1").show();
+        $("#answer-choice-2").show();
+        $("#answer-choice-3").show();
+        $("#answer-choice-4").show();
     }
     function hideHolders() {
         $("#question").hide();
-        $("#answer-option-1").hide();
-        $("#answer-option-2").hide();
-        $("#answer-option-3").hide();
-        $("#answer-option-4").hide();
+        $("#answer-choice-1").hide();
+        $("#answer-choice-2").hide();
+        $("#answer-choice-3").hide();
+        $("#answer-choice-4").hide();
     }
     function hideResults() {
-        $("#correct-holder").hide();
-        $("#incorrect-holder").hide();
+        $("#correct-answer").hide();
+        $("#incorrect-answer").hide();
         $("#unanswered-holder").hide();
         $("#restart-holder").hide();
     }
@@ -45,10 +45,10 @@ $(document).ready(function(){
         $("#time-holder").show();
         showHolders();
         $("#question").html(question[count]);
-        $("#answer-option-1").html(firstChoice[count]);
-        $("#answer-option-2").html(secondChoice[count]);
-        $("#answer-option-3").html(thirdChoice[count]);
-        $("#answer-option-4").html(fourthChoice[count]);
+        $("#answer-choice-1").html(firstChoice[count]);
+        $("#answer-choice-2").html(secondChoice[count]);
+        $("#answer-choice-3").html(thirdChoice[count]);
+        $("#answer-choice-4").html(fourthChoice[count]);
     
     // Hover CSS
         $("#answer-option-1").hover(function() {
@@ -57,29 +57,29 @@ $(document).ready(function(){
         function(){
             $(this).css("color", "black");
         });
-        $("#answer-option-2").hover(function() {
+        $("#answer-choice-2").hover(function() {
             $(this).css("color", "green");
         },
         function(){
             $(this).css("color", "black");
         });
-        $("#answer-option-3").hover(function() {
+        $("#answer-choice-3").hover(function() {
             $(this).css("color", "green");
         },
         function(){
             $(this).css("color", "black");
         });
-        $("#answer-option-4").hover(function() {
+        $("#answer-choice-4").hover(function() {
             $(this).css("color", "green");
         },
         function(){
             $(this).css("color", "black");
         });
     }
-    $("#answer-option-1").on("click", checkAnswer) 
-    $("#answer-option-2").on("click", checkAnswer)
-    $("#answer-option-3").on("click", checkAnswer)
-    $("#answer-option-4").on("click", checkAnswer)
+    $("#answer-choice-1").on("click", checkAnswer) 
+    $("#answer-choice-2").on("click", checkAnswer)
+    $("#answer-choice-3").on("click", checkAnswer)
+    $("#answer-choice-4").on("click", checkAnswer)
 
 // Check Answer Function
     function checkAnswer() {
@@ -199,10 +199,10 @@ $(document).ready(function(){
  // Show Results Function   
     function showResults() {
         $("#answer").html("");
-        $("#correct-holder").show();
-        $("#correct-holder").html("Correct: " + correct);
-        $("#incorrect-holder").show();
-        $("#incorrect-holder").html("Incorrect: " + incorrect);
+        $("#correct-answer").show();
+        $("#correct-answer").html("Correct: " + correct);
+        $("#incorrect-answer").show();
+        $("#incorrect-answer").html("Incorrect: " + incorrect);
         $("#unanswered-holder").show();
         $("#unanswered-holder").html("Unanswered: " + unanswered);
         $("#restart-holder").show();
